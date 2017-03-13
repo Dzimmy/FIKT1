@@ -3,13 +3,11 @@
 Install git bash 
 	https://git-for-windows.github.io/
 	
-1. Fork
-	На github na dadobt izbiras fork --> https://github.com/dadobt/FIKT1
-2. Clone
+2. Clone --> https://github.com/dimestef/FIKT1.git
 	* Clone or download (github) --> copy address
 	* vo git bash
 		1) izbiras folder na laptop prajs git init --> go inicijalizira folderot deka e git
-		2) git clone address --> praj clone na repository od github kaj vas lokalno
+		2) git clone https://github.com/dimestef/FIKT1.git --> praj clone na repository od github kaj vas lokalno
 		3) vnesvas username i pass 
 		4) git status --> gi prikazva site promeni vo folderot koj sto se raboti
 		5) git pull --> gi zema site promeni na odreden file(primer ako rabotite na ist file poke luge vo primerot hello.txt gi zemate promenite na drugiot i posle vrz niv editirate)
