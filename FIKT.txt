@@ -2,9 +2,10 @@
 
 Install git bash 
 	https://git-for-windows.github.io/
+1. Fork --> https://github.com/dimestef/FIKT1.git
+	--> Ova praj kopija od repository sto e navedeno
 	
-2. Clone --> https://github.com/dimestef/FIKT1.git
-	* Clone or download (github) --> copy address
+2. Clone --> https://github.com/*****	VASETO	******/FIKT1.git
 	* vo git bash
 		1) izbiras folder na laptop prajs git init --> go inicijalizira folderot deka e git
 		2) git clone https://github.com/dimestef/FIKT1.git --> praj clone na repository od github kaj vas lokalno
@@ -14,7 +15,11 @@ Install git bash
 		6) git add . --> gi dodadva site files so se editirani, gi dodava vo lokalnoto repository
 		7) git commit -m "First commit on github(Vasa message tuka)" --> gi dodava vo stage faza 
 		8) git push origin master --> gi dodava na server(github) repository
-		
+		9) odite na github na vaseto repository 
+				i odite new pull request kaj sto ke treba da go izberite moeto repository(kako mesto kaj so ke se pusti request) 
+				i vaseto(mesto od kaj so ke go pustite request)
+		10) treba da stigni request kaj mene
+		 
 @@@		HINTS		@@@
 	* Ako nekoj saka da praj PUSH obavezno prvo da proveri dali ima promeni na toj file i da gi prevzemi niv 
 	
