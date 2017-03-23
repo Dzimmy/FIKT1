@@ -1,0 +1,57 @@
+<!doctype>
+
+<html>
+<head>
+</head>
+
+<body>
+
+
+<form id =  "form1">
+
+	Enter your name: <input    name = "name" type= "text" size = "20" />
+
+
+
+	<input type = "button" value = "Submit your name here to show it on the WEB PAGE and the CONSOLE !!!!!" id = "enter" onclick="output()"/>
+
+</form>
+
+<script type = "text/javascript" >
+
+		var i = 0 ;
+
+	function output (){
+
+
+		var x,ime;
+
+		x = document.getElementById ("form1");
+
+		ime = x.elements["name"].value;
+
+		var list = ime;
+		
+		i = i+1;
+	
+
+		document.getElementById ("demo").innerHTML += ("<br>") + i + ": " + list ;
+		
+		console.log (i + ":" + list);
+
+
+
+
+	}
+
+		
+
+
+
+
+</script>
+<p id = "demo"></p>
+
+</body>
+</html>
+
