@@ -1,0 +1,160 @@
+<!doctype>
+
+<html>
+<head>
+</head>
+
+<body>
+
+<script type = "text/javascript" >
+	
+
+
+	var objekt1 = {
+
+		"sports" : {
+
+				"sport1" : "handball",
+				"sport2" : "football"
+
+		 },
+
+		 "food" : {
+
+
+		 		"fast" : "pizza",
+		 		"baked" : "cookie"
+
+		}
+
+
+
+	};
+
+
+
+	var objekt2 = {
+
+
+			"lista1" : [
+
+
+						{
+
+
+								"name" : "Nikola",
+								"surname" : "Razmovski"
+
+						
+						},
+
+						{
+
+
+								"name" : "Petar",
+								"surname" : "Petrovski"
+
+
+						}
+
+			],
+
+			"lista2" : [
+
+
+						{
+
+
+								"animal" : "Lion",
+								"danger_level" : "High threat!!!!"
+
+						
+						},
+
+						{
+
+
+								"animal" : "Cat",
+								"danger_level" : "Not a threat"
+
+
+						}
+
+			]
+
+	}
+
+	var objekt3 = {
+
+
+			"school" : {
+
+					"name" : "FIKT",
+					"place" : "Bitola"
+			},
+
+			"CV" : {
+
+				"name" : "Nick",
+				"surname" : "Young",
+				"CV_quality" : "Solid"
+			},
+
+
+			"nested_OBJ" : {
+
+
+					"obj1" : {
+
+
+						"name" : "Nick",
+						"nickname" : "the beast"
+
+
+					},
+
+					"obj2" : {
+
+						"name" : "James",
+						"nickname" : "King James"
+
+					} 
+
+
+
+			}
+			
+
+	}
+
+
+var proba1 = JSON.stringify(objekt1);
+
+document.write (proba1 + "<br>");
+
+
+
+// strignify funkcijata go pretvora objektot vo STRING  da mozeme da go pratime na web server !!!!!
+
+
+
+
+var proba2 = JSON.parse ('{"sports":{"sport1":"handball","sport2":"football"},"food":{"fast":"pizza","baked":"cookie"}}');
+	for (sp in proba2.sports){
+
+document.write ( proba2.sports[sp] + " , ");
+
+
+}
+
+
+/* prase funkcijata e za konverzija OD <-- objekt koj sto e vo string  ||    VO --> JSON objekt za da moze da se koristi kako OBJEKT vo java script !!! */
+
+</script>
+
+
+
+</body>
+</html>
+
+
