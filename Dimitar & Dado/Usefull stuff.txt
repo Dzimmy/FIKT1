@@ -2,23 +2,27 @@
 
 Install git bash 
 	https://git-for-windows.github.io/
+	
 1. Fork --> https://github.com/dimestef/FIKT1.git
 	--> Ova praj kopija od repository sto e navedeno
 	
 2. Clone --> https://github.com/*****	VASETO	******/FIKT1.git
 	* vo git bash
-		1) izbiras folder na laptop prajs git init --> go inicijalizira folderot deka e git
-		2) git clone https://github.com/dimestef/FIKT1.git --> praj clone na repository od github kaj vas lokalno
+		1) izbiras folder na laptop prajs git init --> go inicijalizira folderot deka e git(ovaj cekor mozis da go skoknis ako sakas)
+		2) git clone https://github.com/*****	VASETO	******/FIKT1.git --> praj clone na repository od github kaj vas lokalno
 		3) vnesvas username i pass 
-		4) git status --> gi prikazva site promeni vo folderot koj sto se raboti
-		5) git pull --> gi zema site promeni na odreden file(primer ako rabotite na ist file poke luge vo primerot hello.txt gi zemate promenite na drugiot i posle vrz niv editirate)
-		6) git add . --> gi dodadva site files so se editirani, gi dodava vo lokalnoto repository
-		7) git commit -m "First commit on github(Vasa message tuka)" --> gi dodava vo stage faza 
-		8) git push origin master --> gi dodava na server(github) repository
-		9) odite na github na vaseto repository 
-				i odite new pull request kaj sto ke treba da go izberite moeto repository(kako mesto kaj so ke se pusti request) 
-				i vaseto(mesto od kaj so ke go pustite request)
-		10) treba da stigni request kaj mene
+		4) Slednite cekori mozite preku browser da gi naprajte(imate sliki postaveno na git) ali visoko preporacvam preku komandna linija
+		5) git remote add upstream repo_you_have_cloned(t.e. moeto repo)
+		6) git remote -v 
+		7) posle odis na git kaj tebe new pull request 
+		8) posle create pull request
+		9) treba da stigni request kaj mene
+		10) git status --> gi prikazva site promeni vo folderot koj sto se raboti
+		11) git pull --> gi zema site promeni na odreden file(primer ako rabotite na ist file poke luge vo primerot hello.txt gi zemate promenite na drugiot i posle vrz niv editirate)
+		12) git add . --> gi dodadva site files so se editirani, gi dodava vo lokalnoto repository
+		13) git commit -m "First commit on github(Vasa message tuka)" --> gi dodava vo stage faza 
+		14) git push origin master --> gi dodava na server(github) repository
+		
 		 
 @@@		HINTS		@@@
 	* Ako nekoj saka da praj PUSH obavezno prvo da proveri dali ima promeni na toj file i da gi prevzemi niv 
