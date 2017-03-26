@@ -1,0 +1,49 @@
+																					
+																INVERSION OF CONTROL
+
+Vo sovtferskoto inzenerstvo Inversion of Control (IoC) e dizajniracki princip kade sto racno napisnai delovi od kompjuterska programa primaat flow of control od genericni frameworks-ovi.Softverska arhitektura so ovaj dizajn ja invertira kontrolata vo sporedba so tradicionalnoto programijranje:
+-Vo tradicionalnoto programiranje custom kodot koj sto ja izrazuva zadacata na programata povikuva biblioteki za da zavrsat genericki zadaci, dodeka so inversion control framework-ot se povikuva vo custom ili task-specific kod.
+
+
+===================================================================================================================================================
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+===================================================================================================================================================
+
+
+																DEPENDENCY INJECTION
+
+Vo softferskoto inzenerstvo , dependency injection e tehnika kade sto eden objekt ja dopolnuva zavisnosta na drug objekt.Zavisnost e objekt koj sto moze da se koristi ,kako servis.Injekcija e dodavanjeto na zavisnost na zavisen objekt koj sto ke ja koristi.
+
+===================================================================================================================================================
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+===================================================================================================================================================
+
+
+																MVC - MODEL VIEW CONTROLLER
+
+Model-View-Controller (MVC) e softverski arhitektonski model za implementacija na user interfejsovi na kompjuter.Ja deli dadena aplikacija na 3 interkonektirani delovi so cel da ja oddeli vnatresnata reprezentacija na informacijata od nacinite na koj taa informacija i se prezentira i e prifatena od user-ot.
+
+===================================================================================================================================================
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+===================================================================================================================================================
+
+
+																JAVA SPRING
+
+The Spring Framework e aplikaciski framework i sodrzatel na inverzija na kontrola za JAVA platformata.Karakteristikite na kodot na jadroto na framework-ot mozat da se koristat so bilo koja Java aplikacija,isto taka ima i ekstenzii za gradenje na web aplikacii nad JAVA EE platformata.
+Dobar e zatoa sto ovozmozuva povrzuvanje na poveke razlicni komponenti zedno.
+
+
+===================================================================================================================================================

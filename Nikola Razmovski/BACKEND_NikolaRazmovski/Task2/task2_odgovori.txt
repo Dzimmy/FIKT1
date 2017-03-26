@@ -1,0 +1,72 @@
+
+==========================================ER Dijagaram====================================================
+
+
+Entity Relationship Diagram e graficka reprezentacija na entitetite i nivnite megusebni relacii , tipicno
+se koristi za dobra oragnizacija na potadocite vo edna baza na podatoci ili informaciski sistem.
+
+
+==========================================================================================================
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+===============================================ENTITY_1=====================================================
+
+
+Entitet e objekt vo sistemot koj nie sakame da go modelirame i da zacuvame informacija za nego.Entitetite
+se najcesto prepoznatilivi koncepti , realni ili apstraktni, kako na primer licnost , mesto ili nastani 
+koi se relevantni za soodvetnata baza na podatoci.
+
+
+==========================================================================================================
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+=============================================ATTRIBUTE======================================================
+
+
+Generalno atributot e karakteristika.Vo Sistemot za Menagiranje na Bazata na podatoci , atributot se odnesuva
+na komponent na bazata , kako na primer tabela. Isto taka moze i da se odnesuva na pole vo bazata na podatoci.
+Atributite opisuvaat instanca od red na bazata na podatoci !!!
+
+
+============================================================================================================
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+=============================================RELATIONSHIPS=====================================================
+
+
+Relaciite vo bazite na podatoci se mnogu slicni po toa sto tie se asocijacii pomegu tabelite.
+Postojat 3 vidovi na relacii:
+Eden-na-eden:
+	-Dvete tabeli mozat da imaat samo po eden zapis na dvete strani od relacijata.Sekoja vrednost na primarniot
+	kluc se odnesuva na eden ( ili nieden ) zapis vo relacionata tabela.
+Eden-na-mnogu:
+	-Tabelata na primarniot kluc sodrzi samo eden zapis koj moze da se odnesuva na nieden,eden ili mnogu zapisi
+	vo relacionata tabela.
+Mnogu-na-mnogu:
+	-Sekoj zapis od dvete tabeli moze da se odnesuva na bilo koj broj na zapisi (ili na nieden)	vo drugata tabela.
+	Mnogu-na-Mnogu relaciite imaat potreba od treta tabela , asocijativna ili povrzivacka tabela , bidejki 
+	relacionite sistemi nemozat direktno da se prilagodat na relacijata.
+
+
+================================================================================================================
+
+
+

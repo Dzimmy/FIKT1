@@ -1,0 +1,8 @@
+																					
+																			INVERSION OF CONTROL
+
+Vo sovtferskoto inzenerstvo Inversion of Control (IoC) e dizajniracki princip kade sto racno napisnai delovi od kompjuterska programa primaat flow of control od genericni frameworks-ovi.Softverska arhitektura so ovaj dizajn ja invertira kontrolata vo sporedba so tradicionalnoto programijranje:
+-Vo tradicionalnoto programiranje custom kodot koj sto ja izrazuva zadacata na programata povikuva biblioteki za da zavrsat genericki zadaci, dodeka so inversion control framework-ot se povikuva vo custom ili task-specific kod.
+
+
+========================================================================================================================================================
