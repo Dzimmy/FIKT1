@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script type="text/javascript">
+    var x = 0;
+	var array = Array();
+
+	function add_element_to_array()
+	{
+		 array[x] = document.getElementById("text1").value;
+		 console.log(array[x]);
+		 x++;
+		 document.getElementById("text1").value = "";
+	}
+
+</script>
+
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+
+
+</body>
+</body>
+</html>

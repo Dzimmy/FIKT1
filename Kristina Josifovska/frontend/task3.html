@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script type=text/javascript>
+	var actor1 = {
+    "name":"Orlando",
+    "lastname":"Bloom",
+    "age":40,
+    "movies":[{"name":"The Lord of the Rings", "director":" Peter Jackson", "genre":"adventure, fantasy"},
+    {"name":"Troy","year":2004, "director":"Wolfgang Petersen","genre":"Adventure"}
+
+    ]
+    }
+
+    var actor2 = {
+    "name":"Viggo",
+    "lastname":"Mortensen",
+    "age":58
+    }
+ 
+    var object = {
+    	"Student1" : {
+    		"ime" : "Trajce",
+    		"prezime" : "Trajcevski",
+    		"indeks" : "1455"
+    	},
+    	"Student2" : {
+    		"ime" : "Stojan",
+    		"prezime" : "Stojanovski",
+    		"indeks" : "32442"
+    	},
+    	"Profesor":{
+    		"informacii" :{
+    			"ime" : "Violeta",
+    			"prezime" : "Manevska",
+    		},
+    		"predmet" :{
+    			"naziv" : "Bazi na podatoci",
+    			"krediti" : 6,
+    			"semestar" : 4
+    		}
+    	}
+    }
+
+  
+    var obj1 = JSON.stringify(actor1);
+    document.write(obj1);
+    
+    var obj2 = JSON.parse('{"name":"Kristina", "age":20, "city":"Ohrid"}');
+   document.write(obj2.name);
+    
+	</script>
+</body>
+</html>
