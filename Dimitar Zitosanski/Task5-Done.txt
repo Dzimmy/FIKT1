@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<p>objekt so random vrednosti</p>
+
+<button onclick="myFunction()"><b>Generiraj:</b> </button>
+
+<p id="zadaca"></p>
+
+<script>
+function myFunction() {
+	var array = Array[1, 5, 2, 22, 19, 54, 34, 23, 63, 12, 32, 55, 34, 89, 97, 62, 29, 10, 7, 4];
+    var doc = document.getElementById("zadaca");
+    doc.innerHTML = Math.floor((Math.random(array) * 100) + 1);
+}
+</script>
+
+</body>
+</html>

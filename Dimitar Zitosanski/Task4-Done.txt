@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Input</title>
+</head>
+
+    <form>
+  <h1>Please enter data in the field below</h1>
+
+  <input type="button" value="Input" onclick="insert()" />
+  <input id="array" type="text" placeholder="Array" />
+  
+  
+</form>
+<div id="display"></div>
+
+<body>
+
+<script>
+
+// Praenje prazna niza
+var arrays  = [];
+
+var arrayInput  = document.getElementById("array");
+
+var messageBox  = document.getElementById("display");
+
+function insert ( ) {
+
+  // Go vnesuva tekstot i potoa se povikuva vednas clearAndShow(); funkcijata
+ arrays.push( arrayInput.value );
+
+ clearAndShow();
+}
+
+function clearAndShow () {
+  // Se brisi poleto
+  arrayInput.value = "";
+  
+  // Ovaj kod gi prikazuva vrednostite 
+  messageBox.innerHTML = "";
+  
+  messageBox.innerHTML += "U've just inputted this text: " + arrays.join(", ");
+
+  // Ja pecati vo konzola nizata. Vo Chrome - More Tools -> Developer Tools -> Console
+  console.log(arrays);
+  
+}
+
+
+    
+</script>
+</body>
+</html>

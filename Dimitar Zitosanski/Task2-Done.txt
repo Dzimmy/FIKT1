@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Klik brojac</title>
+</head>
+
+    <button type="button" onClick="onClick()">Klikni me</button>
+    <p>Klikovi: <a id="klikovi">0</a></p>
+
+<body>
+    <script>
+    var klikovi = 0;
+    function onClick() {
+       
+        	klikovi ++;
+        
+        document.getElementById("klikovi").innerHTML = klikovi;
+        console.log(klikovi);
+    };
+    </script>
+
+   
+
+</body></html>

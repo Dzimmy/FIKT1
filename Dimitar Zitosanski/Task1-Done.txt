@@ -1,0 +1,57 @@
+﻿For obicen:
+
+var audi = new Array("A4", "A5", "Q3", "Q5", "Q7");
+
+audiLen = audi.length;
+
+for (var i = 0; i < audiLen; i++) {
+    console.log(audi[i]);
+}
+
+
+
+
+for како forEach :
+
+var audi ={sedan1:"A4", sedan2:"A5", jeep1:"Q3", jeep2:"Q5", jeep3:"Q7"};
+
+var a;
+
+for (a in audi) {
+    console.log(audi[a]);
+
+}
+
+
+
+
+for kako forEach so nameOfList.forEach(function(obj){}):
+
+var audi ={sedan1:"A4", sedan2:"A5", jeep1:"Q3", jeep2:"Q5", jeep3:"Q7"};
+
+var a;
+
+for (a in audi) {
+    console.log(audi[a]);
+
+}
+
+var getKeys = function(audi){
+var list = [];
+for(var key in audi){
+list.push(key);
+}
+return list;
+}
+
+
+
+
+
+alert() vs console.log()
+
+Podobro e da se koristi console.log bidejki:
+
+alert() ja blokira stranata, nemozi da se koristi dobro vo ne debagiracka okolina, moze da se gleda samo edna poraka vo dadeno vreme.
+
+console.log() - poubo gi ureduva objektite i mozi da ima razlicni logging leveli

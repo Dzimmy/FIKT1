@@ -1,0 +1,53 @@
+﻿myObj = {
+    "name":"Dimitar",
+    "age":30,
+
+    "friends": {
+        "friend1":"Zdravko",
+        "friend2":"Petar",
+    }
+ }
+
+
+stringify();
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>json string od javascript object</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var obj = { "ime":"Dimitar", "godini":19, "grad":"Bitola"};
+var str = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = str;
+
+</script>
+
+</body>
+</html>
+
+
+parse();
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>parse od JSON array</h2>
+
+<p id="test"></p>
+
+<script>
+
+var obj = JSON.parse('{ "ime":"Dimitar", "godini":19, "grad":"BT"}');
+document.getElementById("test").innerHTML = obj.ime + ", " + obj.godini + ", " + obj.grad;
+
+</script>
+
+</body>
+</html>
