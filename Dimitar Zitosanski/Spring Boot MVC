@@ -1,0 +1,394 @@
+package didi.zitosanski;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AlbumsDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AlbumsDemoApplication.class, args);
+	}
+}
+
+
+package didi.zitosanski.Controller;
+
+import didi.zitosanski.Entity.Album;
+import didi.zitosanski.Entity.Card;
+import didi.zitosanski.Entity.Duplicates;
+import didi.zitosanski.Entity.Missing;
+import didi.zitosanski.Service.AlbumService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Collection;
+
+@RestController
+@EnableAutoConfiguration
+public class AlbumController {
+
+    @Autowired
+    private AlbumService albumService;
+
+    @RequestMapping (value = "/allAlbums", method = RequestMethod.GET)
+    public Collection<Album>getAllAlbums() {
+        return albumService.getAllAlbums();
+    }
+
+    @RequestMapping (value = "album/{id}", method = RequestMethod.GET)
+    public Album getAlbumById(@PathVariable("id") int id) {
+        return albumService.getAlbumById(id);
+    }
+
+    @RequestMapping (value = "album/{id}/missing", method = RequestMethod.GET)
+    public Collection<Missing> getAllMissingCards() {
+        return albumService.getAllMissingCards();
+    }
+
+    @RequestMapping (value = "album/{id}/{missId}/missing", method = RequestMethod.GET)
+    public Missing getMissingCard(@PathVariable("missId") int missId) {
+        return albumService.getMissingCard(missId);
+    }
+
+    @RequestMapping (value = "album/{id}/duplicates", method = RequestMethod.GET)
+    public Collection<Duplicates> getAllDuplicatedCards() {
+        return albumService.getAllDuplicatedCards();
+    }
+
+    @RequestMapping (value = "album/{id}/{duplId}/duplicates", method = RequestMethod.GET)
+    public Duplicates getDuplicatedCard(@PathVariable("duplId") int duplId) {
+        return albumService.getDuplicatedCard(duplId);
+    }
+
+    @RequestMapping (value = "album/{id}/{duplId}/duplicates/{cardId}/view", method = RequestMethod.GET)
+    public Card getCardById(@PathVariable("cardId") int duplId) {
+        return albumService.getCardById(duplId);
+    }
+}
+
+
+package didi.zitosanski.Service;
+
+import didi.zitosanski.Entity.Album;
+import didi.zitosanski.Entity.Card;
+import didi.zitosanski.Entity.Duplicates;
+import didi.zitosanski.Entity.Missing;
+import didi.zitosanski.Repository.AlbumRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Collection;
+
+@Service
+public class AlbumService {
+
+    @Autowired
+    private AlbumRepository albumRepository;
+
+    public Collection<Album> getAllAlbums() {
+        return this.albumRepository.getAllAlbums();
+    }
+
+    public Album getAlbumById(int id) {
+        return this.albumRepository.getAlbumById(id);
+    }
+
+    public Collection<Missing> getAllMissingCards() {
+        return this.albumRepository.getAllMissingCards();
+    }
+
+    public Missing getMissingCard(int missId) {
+        return this.albumRepository.getMissingCard(missId);
+    }
+
+    public Collection<Duplicates> getAllDuplicatedCards() {
+        return this.albumRepository.getAllDuplicatedCards();
+    }
+
+    public Duplicates getDuplicatedCard(int duplId) {
+        return this.albumRepository.getDuplicatedCard(duplId);
+    }
+
+    public Card getCardById(int cardId) {
+        return this.albumRepository.getCardById(cardId);
+    }
+}
+
+
+package didi.zitosanski.Repository;
+
+import didi.zitosanski.Entity.Album;
+import didi.zitosanski.Entity.Card;
+import didi.zitosanski.Entity.Duplicates;
+import didi.zitosanski.Entity.Missing;
+import org.springframework.stereotype.Repository;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+@Repository
+public class AlbumRepository {
+    private static Map<Integer, Album> album;
+    private static Map<Integer, Missing> missing;
+    private static Map<Integer, Duplicates> duplicates;
+    private static Map<Integer, Card> cardid;
+
+    static {
+        album = new HashMap<Integer, Album>() {
+            {
+                put(1, new Album(1,200,"FIFA 2017"));
+                put(2, new Album(2, 340, "WORLDS CUP 2018"));
+                put(3, new Album(3,400,"NBA 2017"));
+            }
+        };
+
+        missing = new HashMap<Integer, Missing>() {
+            {
+                put(1, new Missing(1,32,"url:www.wiki/fifa2017"));
+                put(2, new Missing(2,12,"url:www.wiki/worldscup2018"));
+                put(3, new Missing(3,33,"url:www.wiki/nba2017"));
+            }
+        };
+
+        duplicates = new HashMap<Integer, Duplicates>() {
+            {
+                put(1, new Duplicates(1,3,"www.wiki/fifa2017"));
+                put(2, new Duplicates(2,4,"www.wiki/worldscup"));
+                put(3, new Duplicates(3,6,"www.wiki/nba2017"));
+            }
+        };
+
+        cardid = new HashMap<Integer, Card>() {
+            {
+                put(1, new Card(1,"URL:www.wiki/fifa2017D231232%23$55"));
+                put(2, new Card(2,"URL:www.wiki/worldscupD231232%232D12"));
+                put(3, new Card(3,"URL:www.wiki/nba2017D231232%222D21"));
+            }
+        };
+    }
+
+    public Collection<Album> getAllAlbums() {
+        return this.album.values();
+    }
+
+    public Album getAlbumById(int id) {
+        return this.album.get(id);
+    }
+
+    public Collection<Missing> getAllMissingCards() {
+        return this.missing.values();
+    }
+
+    public Missing getMissingCard(int missId) {
+        return this.missing.get(missId);
+    }
+
+    public Collection<Duplicates> getAllDuplicatedCards() {
+        return this.duplicates.values();
+    }
+
+    public Duplicates getDuplicatedCard(int duplId) {
+        return this.duplicates.get(duplId);
+    }
+
+    public Card getCardById(int cardId) {
+        return this.cardid.get(cardId);
+    }
+}
+
+
+package didi.zitosanski.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Card {
+
+    @Id
+    @GeneratedValue
+    private int cardId;
+    private String photoURL;
+
+    public Card(int cardId, String photoURL) {
+        this.cardId = cardId;
+        this.photoURL = photoURL;
+    }
+
+    @OneToMany
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
+    }
+
+    public String getPhotoURL() {
+        return photoURL;
+    }
+
+    public void setPhotoURL(String photoURL) {
+        this.photoURL = photoURL;
+    }
+}
+
+
+package didi.zitosanski.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Album {
+
+    @Id
+    @GeneratedValue
+    private int id;
+    private int numOfCards;
+    private String albumName;
+
+    public Album(int id, int numOfCards, String albumName) {
+        this.id = id;
+        this.numOfCards = numOfCards;
+        this.albumName = albumName;
+    }
+
+    @OneToMany
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNumOfCards() {
+        return numOfCards;
+    }
+
+    public void setNumOfCards(int numOfCards) {
+        this.numOfCards = numOfCards;
+    }
+
+    public String getAlbumName() {
+        return albumName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
+}
+
+
+package didi.zitosanski.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Missing {
+
+    @Id
+    @GeneratedValue
+    private int missId;
+    private int missing;
+    private String view;
+
+    public Missing(int missId, int missing, String view) {
+        this.missId = missId;
+        this.missing = missing;
+        this.view = view;
+    }
+
+    @OneToMany
+
+
+    public int getId() {
+        return missId;
+    }
+
+    public void setId(int id) {
+        this.missId = id;
+    }
+
+    public int getMissing() {
+        return missing;
+    }
+
+    public void setMissing(int missing) {
+        this.missing = missing;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
+    }
+}
+
+
+package didi.zitosanski.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Duplicates {
+
+    @Id
+    @GeneratedValue
+    public int duplId;
+    public int duplicates;
+    public String view;
+
+    public Duplicates(int duplId, int duplicates, String view) {
+        this.duplId = duplId;
+        this.duplicates = duplicates;
+        this.view = view;
+    }
+
+    @OneToMany
+
+    public int getId() {
+        return duplId;
+    }
+
+    public void setId(int id) {
+        this.duplId = id;
+    }
+
+    public int getDuplicates() {
+        return duplicates;
+    }
+
+    public void setDuplicates(int duplicates) {
+        this.duplicates = duplicates;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
+    }
+}
